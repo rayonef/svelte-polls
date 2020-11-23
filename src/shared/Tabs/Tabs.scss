@@ -1,0 +1,22 @@
+$active-color: #d91b42;
+
+.tabs {
+    margin-bottom: 40px;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.tab {
+    margin: 0 1rem;
+    color: #555;
+    font-size: 1.125rem;
+    cursor: pointer;
+
+    &--active {
+        color: $active-color;
+        border-bottom: 2px solid $active-color;
+        padding-bottom: 8px;
+    }
+}

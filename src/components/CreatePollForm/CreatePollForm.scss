@@ -1,0 +1,27 @@
+$error-color: #d91b42;
+
+
+.poll-form {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.form-field {
+    margin: 18px auto;
+
+    > label {
+        margin: 10px auto;
+        text-align: left;
+    }
+
+    > input {
+        width: 100%;
+        border-radius: 6px;
+    }
+
+    > small {
+        color: $error-color;
+        text-align: left;
+    }
+}
