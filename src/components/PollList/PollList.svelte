@@ -3,7 +3,7 @@
     import { fade, slide, scale } from 'svelte/transition';
     import { flip } from 'svelte/animate';
 
-    import PollStore from 'stores/PollStore.js'
+    import PollStore from 'stores/PollStore.js';
     import Poll from 'components/Poll/Poll.svelte';
 
     // let polls = [];
@@ -20,12 +20,8 @@
 
 <div class="polls">
     {#each $PollStore.polls as poll (poll.id)}
-        <div
-            in:fade
-            out:scale|local
-            animate:flip={{ duration: 500 }}
-        >
-            <Poll {poll}/>
+        <div in:fade out:scale|local animate:flip={{ duration: 500 }}>
+            <Poll />
         </div>
     {/each}
 </div>
