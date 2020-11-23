@@ -55,6 +55,7 @@
             });
 
             dispatch('addPoll');
+            console.log('hello');
         }
     };
 </script>

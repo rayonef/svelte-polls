@@ -4,19 +4,17 @@ module.exports = {
     singleQuote: true,
     tabWidth: 4,
     // svelteSortOrder: 'scripts-markup-styles',
+    svelteAllowShorthand: false,
     overrides: [
         {
-            files: [
-                '.prettierrc',
-                '.eslintrc',
-                '.babelrc',
-                '.tern-project',
-                '.stylelintrc',
-                '.lighthouserc',
-            ],
+            files: ['.prettierrc', '.eslintrc', '.babelrc', '.stylelintrc'],
             options: {
                 parser: 'json',
             },
+        },
+        {
+            files: ['*.svelte'],
+            processor: 'svelte3/svelte3',
         },
         {
             files: ['package.json'],

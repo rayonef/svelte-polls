@@ -18,14 +18,14 @@
     // });
 </script>
 
-<div class="polls">
-    {#each $PollStore.polls as poll (poll.id)}
-        <div in:fade out:scale|local animate:flip={{ duration: 500 }}>
-            <Poll />
-        </div>
-    {/each}
-</div>
-
 <style lang="scss">
     @import './PollList.scss';
 </style>
+
+<div class="polls">
+    {#each $PollStore.polls as poll (poll.id)}
+        <div in:fade out:scale|local animate:flip={{ duration: 500 }}>
+            <Poll poll={poll} />
+        </div>
+    {/each}
+</div>
