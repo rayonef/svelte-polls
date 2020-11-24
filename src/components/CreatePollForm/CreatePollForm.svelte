@@ -9,12 +9,12 @@
         question: '',
         answerA: '',
         answerB: '',
-    }
+    };
     let errors = {
         question: '',
         answerA: '',
         answerB: '',
-    }
+    };
     let valid = false;
 
     const handleSubmit = () => {
@@ -50,36 +50,30 @@
 
             // save poll to store
             PollStore.update((state) => {
-                console.log(state);
-                return { ...state, polls: [ poll, ...state.polls ] };
-            })
+                return { ...state, polls: [poll, ...state.polls] };
+            });
 
             dispatch('addPoll');
+            console.log('should be linted');
         }
-    }
+    };
 </script>
 
 <form class="poll-form" on:submit|preventDefault={handleSubmit}>
     <div class="form-field">
         <label for="question">Poll Question: </label>
-        <input id="question" type="text" bind:value={fields.question}>
-        {#if errors.question}
-            <small class="error">{errors.question}</small>
-        {/if}
+        <input id="question" type="text" bind:value={fields.question} />
+        {#if errors.question}<small class="error">{errors.question}</small>{/if}
     </div>
     <div class="form-field">
         <label for="answer-a">Answer A: </label>
-        <input id="answer-a" type="text" bind:value={fields.answerA}>
-        {#if errors.answerA}
-            <small class="error">{errors.answerA}</small>
-        {/if}
+        <input id="answer-a" type="text" bind:value={fields.answerA} />
+        {#if errors.answerA}<small class="error">{errors.answerA}</small>{/if}
     </div>
     <div class="form-field">
         <label for="Answer-b">Answer B: </label>
-        <input id="Answer-b" type="text" bind:value={fields.answerB}>
-        {#if errors.answerB}
-            <small class="error">{errors.answerB}</small>
-        {/if}
+        <input id="Answer-b" type="text" bind:value={fields.answerB} />
+        {#if errors.answerB}<small class="error">{errors.answerB}</small>{/if}
     </div>
     <Button type="secondary" flat>Add Poll</Button>
 </form>
