@@ -11,8 +11,9 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:prettier/recommended',
+        'plugin:import/recommended',
     ],
-    plugins: ['prettier', 'svelte3'],
+    plugins: ['import', 'svelte3'],
     overrides: [
         {
             files: ['**/*.svelte'],
@@ -22,6 +23,6 @@ module.exports = {
     rules: {
         "indent": ["error", 4],
         "no-console": ["error", { "allow": ["error", "warn"]}],
-        'prettier/prettier': 'error',
+        // 'prettier/prettier': 'error',
     },
 };

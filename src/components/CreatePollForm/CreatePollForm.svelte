@@ -50,19 +50,14 @@
 
             // save poll to store
             PollStore.update((state) => {
-                console.log(state);
                 return { ...state, polls: [poll, ...state.polls] };
             });
 
             dispatch('addPoll');
-            console.log('hello');
+            console.log('should be linted');
         }
     };
 </script>
-
-<style lang="scss">
-    @import './CreatePollForm.scss';
-</style>
 
 <form class="poll-form" on:submit|preventDefault={handleSubmit}>
     <div class="form-field">
@@ -82,3 +77,7 @@
     </div>
     <Button type="secondary" flat>Add Poll</Button>
 </form>
+
+<style lang="scss">
+    @import './CreatePollForm.scss';
+</style>

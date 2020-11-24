@@ -3,7 +3,8 @@ module.exports = {
     trailingComma: 'all',
     singleQuote: true,
     tabWidth: 4,
-    // svelteSortOrder: 'scripts-markup-styles',
+    svelteSortOrder: 'scripts-markup-styles',
+    svelteBracketNewLine: true,
     svelteAllowShorthand: false,
     overrides: [
         {

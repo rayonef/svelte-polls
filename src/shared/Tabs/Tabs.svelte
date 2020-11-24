@@ -4,7 +4,6 @@
 
     export let tabs;
     export let activeTab;
-
 </script>
 
 <nav>

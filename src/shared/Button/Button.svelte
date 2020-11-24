@@ -8,12 +8,12 @@
         ${type === 'primary' ? 'button--primary' : ''}
         ${type === 'secondary' ? 'button--secondary' : ''}
         ${flat ? 'button--flat' : ''}
-        ${inverse ? 'button--inverse': ''}
-    `
+        ${inverse ? 'button--inverse' : ''}
+    `;
 </script>
 
 <button class={classes} on:click>
-    <slot></slot>
+    <slot />
 </button>
 
 <style lang="scss">

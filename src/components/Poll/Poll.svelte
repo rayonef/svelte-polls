@@ -38,9 +38,7 @@
     };
 
     const handleDelete = (id) => {
-        console.log('delete', id);
         PollStore.update((state) => {
-            console.log(state);
             return {
                 ...state,
                 polls: state.polls.filter((poll) => poll.id !== id),
@@ -49,10 +47,6 @@
     };
 </script>
 
-<style lang="scss">
-    @import './Poll.scss';
-</style>
-
 <Card>
     <div class="poll">
         <h3 class="poll__question">{poll.question}</h3>
@@ -60,13 +54,15 @@
         <div class="answer" on:click={() => handleVote('a', poll.id)}>
             <div
                 class="answer__percent answer__percent--a"
-                style="width: {$tweenedA}%" />
+                style="width: {$tweenedA}%"
+            />
             <div class="answer__info">{poll.answerA} ({poll.votesA})</div>
         </div>
         <div class="answer" on:click={() => handleVote('b', poll.id)}>
             <div
                 class="answer__percent answer__percent--b"
-                style="width: {$tweenedB}%" />
+                style="width: {$tweenedB}%"
+            />
             <div class="answer__info">{poll.answerB} ({poll.votesB})</div>
         </div>
 
@@ -77,3 +73,7 @@
         </div>
     </div>
 </Card>
+
+<style lang="scss">
+    @import './Poll.scss';
+</style>
